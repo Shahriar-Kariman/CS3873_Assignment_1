@@ -72,3 +72,44 @@ d_{nodal} = d_{trans} + d_{prop} = \frac{2.3 \times 10^3}{100 \times 10^6} + \fr
 $$
 
 ## Question 3 - E2E File Transfer
+
+so we know $R_1 = 10 \ Mbps$, $R_2 = 25 \ Mbps$, $R_3 = 20 \ Mbps$.
+
+```mermaid
+block-beta
+  a["Host A"]
+  space
+  n_1["Node 1"]
+  space
+  n_2["Node 2"]
+  space
+  n_3["Node 3"]
+  space
+  b["Host B"]
+  a --> n_1
+  n_1 --> n_2
+  n_2 --> n_3
+  n_3 --> b
+```
+
+### Part A
+
+The total through put should be:
+
+$$
+\begin{split}
+
+R = \min(R_1, R_2, R_3) = 10 \ Mbps
+
+\end{split}
+$$
+
+### Part b
+
+$$
+\begin{split}
+
+d_{e2e} \approx \frac{P \times L}{R} = \frac{1 \times 250 \times 10^6 \times 8}{10^7} = 200 \sec
+
+\end{split}
+$$
