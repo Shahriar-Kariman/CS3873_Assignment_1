@@ -71,7 +71,7 @@ d_{nodal} = d_{trans} + d_{prop} = \frac{2.3 \times 10^3}{100 \times 10^6} + \fr
 \end{split}
 $$
 
-## Question 3 - E2E File Transfer
+## Question 3 - E2E File Transfer With Different Throughput on Each Node
 
 so we know $R_1 = 10 \ Mbps$, $R_2 = 25 \ Mbps$, $R_3 = 20 \ Mbps$.
 
@@ -104,12 +104,51 @@ R = \min(R_1, R_2, R_3) = 10 \ Mbps
 \end{split}
 $$
 
-### Part b
+### Part B
 
 $$
 \begin{split}
 
 d_{e2e} \approx \frac{P \times L}{R} = \frac{1 \times 250 \times 10^6 \times 8}{10^7} = 200 \sec
+
+\end{split}
+$$
+
+### Part C
+
+With $R_1$ reduced to $5 \ Mbps$ and its the lowest among the nodes so the total throughput would now be equal to $5 \ Mbps$.
+
+And I can easily reapproximate the time it takes to send the file from end to end.
+
+$$
+\begin{split}
+
+d_{e2e} \approx \frac{P \times L}{R} = \frac{1 \times 250 \times 10^6 \times 8}{5 \times 10^6} = 400 \sec
+
+\end{split}
+$$
+
+Notice how the total delay is doubled and that is because the delay is inversely related to through.
+
+$$
+\begin{split}
+
+d_{e2e} \propto \frac{1}{R_t}
+
+\end{split}
+$$
+
+## Question 4 - E2E Same Rate Links
+
+So this is very similar to the last question but the rates are the same.
+
+$$
+\begin{split}
+
+R = 10^8 \ bps, \ \ N = 3, \ \ P = 100, \ \ L = 1.5 \times 10^3 \times 8 \ bits
+\\
+d_{e2e} = (P-1) \tau + N \tau = (P-1+N) \times \tau = (P+N-1) \times \frac{L}{R}=
+102 \times \frac{1.5 \times 8}{10^5} = 1.2 \times 10^{-2} \ sec = 12 \ ms
 
 \end{split}
 $$
