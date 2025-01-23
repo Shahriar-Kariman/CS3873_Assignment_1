@@ -39,7 +39,7 @@ block-beta
   end
 ```
 
-And the router processes the Network layer since it containes the information for source, destination and routing protocols.
+And the router processes the Network layer since it contains the information for source, destination and routing protocols.
 
 ## Question 2 - Sending a Packet over a Link
 
@@ -55,7 +55,7 @@ d_{prop} = \frac{d_{m}}{s_{m/sec}}
 \end{split}
 $$
 
-And assuimng the processing and queueing delays are negligable then we can say:
+And assuming the processing and queuing delays are negligible then we can say:
 
 $$
 \begin{split}
@@ -106,7 +106,7 @@ $$
 
 With $R_1$ reduced to $5 \ Mbps$ and its the lowest among the nodes so the total throughput would now be equal to $5 \ Mbps$.
 
-And I can easily reapproximate the time it takes to send the file from end to end.
+And I can easily re-approximate the time it takes to send the file from end to end.
 
 $$
 \begin{split}
@@ -130,14 +130,16 @@ $$
 \begin{split}
 R = 10^8 \ bps, \ \ N = 3, \ \ P = 100, \ \ L = 1.5 \times 10^3 \times 8 \ bits
 \\
+\\
 d_{e2e} = (P-1) \tau + N \tau = (P-1+N) \times \tau = (P+N-1) \times \frac{L}{R}=
+\\
 102 \times \frac{1.5 \times 8}{10^5} = 1.2 \times 10^{-2} \ sec = 12 \ ms
 \end{split}
 $$
 
 ## Question 5
 
-A packet is beeing sent between 2 nodes.
+A packet is being sent between 2 nodes.
 
 ### Part A - $d_{trans}$
 
