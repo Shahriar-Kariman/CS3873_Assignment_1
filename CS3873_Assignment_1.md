@@ -132,9 +132,7 @@ Notice how the total delay is doubled and that is because the delay is inversely
 
 $$
 \begin{split}
-
 d_{e2e} \propto \frac{1}{R_t}
-
 \end{split}
 $$
 
