@@ -52,11 +52,11 @@ d_{nodal} = d_{proc} + d_{queue} + d_{trans} + d_{prop}
 
 \\
 
-d_{trans} = \frac{L_{(bytes)}}{R_{(bps)}}
+d_{trans} = \frac{L_{bytes}}{R_{bps}}
 
 \\
 
-d_{prop} = \frac{d_{(m)}}{s_{(m/sec)}}
+d_{prop} = \frac{d_{m}}{s_{m/sec}}
 
 \end{split}
 $$
@@ -99,7 +99,7 @@ The total through put should be:
 $$
 \begin{split}
 
-R = \min(R_1, R_2, R_3) = 10 \ Mbps
+R = min(R_1, R_2, R_3) = 10 \ Mbps
 
 \end{split}
 $$
@@ -109,7 +109,7 @@ $$
 $$
 \begin{split}
 
-d_{e2e} \approx \frac{P \times L}{R} = \frac{1 \times 250 \times 10^6 \times 8}{10^7} = 200 \sec
+d_{e2e} \approx \frac{P \times L}{R} = \frac{1 \times 250 \times 10^6 \times 8}{10^7} = 200 \ sec
 
 \end{split}
 $$
@@ -123,7 +123,7 @@ And I can easily reapproximate the time it takes to send the file from end to en
 $$
 \begin{split}
 
-d_{e2e} \approx \frac{P \times L}{R} = \frac{1 \times 250 \times 10^6 \times 8}{5 \times 10^6} = 400 \sec
+d_{e2e} \approx \frac{P \times L}{R} = \frac{1 \times 250 \times 10^6 \times 8}{5 \times 10^6} = 400 \ sec
 
 \end{split}
 $$
@@ -150,5 +150,31 @@ R = 10^8 \ bps, \ \ N = 3, \ \ P = 100, \ \ L = 1.5 \times 10^3 \times 8 \ bits
 d_{e2e} = (P-1) \tau + N \tau = (P-1+N) \times \tau = (P+N-1) \times \frac{L}{R}=
 102 \times \frac{1.5 \times 8}{10^5} = 1.2 \times 10^{-2} \ sec = 12 \ ms
 
+\end{split}
+$$
+
+## Question 5
+
+A packet is beeing sent between 2 nodes.
+
+### Part A - $d_{trans}$
+
+At the time $t = d_{trans}$ the last bit of the the packet is being sent meaning the last bit of the packet is technical still at host A.
+
+### Part B - $d_{prop} > d_{trans}$
+
+At time $t = d_{trans}$ the first bit of the packet is still in between the nodes since $d_{prop} > d_{trans}$.
+
+### Part C - Arrival of the $1_{st}$ Bit
+
+The first bit of the $2_{nd}$ packet will arrive at $t = d_{trans} + d_{prop} + \frac{1}{R}$.
+
+$$
+\begin{split}
+d_{prop} = \frac{m}{s} = \frac{400}{2.5 \times 10^8} = 1.6 \times 10^{-6} \ sec
+\\
+d_{trans} = \frac{L}{R} = \frac{2 \times 10^3 \times 8}{10^7} = 1.6 \times 10^{-3} \ sec
+\\
+t = 1.6 \times 10^{-6} + 1.6 \times 10^{-3} + \frac{1}{10^7} = 1.6017 \times 10^{-3} \ sec
 \end{split}
 $$
