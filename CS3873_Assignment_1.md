@@ -144,12 +144,10 @@ So this is very similar to the last question but the rates are the same.
 
 $$
 \begin{split}
-
 R = 10^8 \ bps, \ \ N = 3, \ \ P = 100, \ \ L = 1.5 \times 10^3 \times 8 \ bits
 \\
 d_{e2e} = (P-1) \tau + N \tau = (P-1+N) \times \tau = (P+N-1) \times \frac{L}{R}=
 102 \times \frac{1.5 \times 8}{10^5} = 1.2 \times 10^{-2} \ sec = 12 \ ms
-
 \end{split}
 $$
 
