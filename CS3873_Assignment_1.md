@@ -47,13 +47,9 @@ Here are some of the formulas from the slide I will be using a couple of them:
 
 $$
 \begin{split}
-
 d_{nodal} = d_{proc} + d_{queue} + d_{trans} + d_{prop}
-
 \\
-
 d_{trans} = \frac{L_{bytes}}{R_{bps}}
-
 \\
 
 d_{prop} = \frac{d_{m}}{s_{m/sec}}
@@ -98,9 +94,7 @@ The total through put should be:
 
 $$
 \begin{split}
-
 R = min(R_1, R_2, R_3) = 10 \ Mbps
-
 \end{split}
 $$
 
@@ -108,9 +102,7 @@ $$
 
 $$
 \begin{split}
-
 d_{e2e} \approx \frac{P \times L}{R} = \frac{1 \times 250 \times 10^6 \times 8}{10^7} = 200 \ sec
-
 \end{split}
 $$
 
@@ -122,9 +114,7 @@ And I can easily reapproximate the time it takes to send the file from end to en
 
 $$
 \begin{split}
-
 d_{e2e} \approx \frac{P \times L}{R} = \frac{1 \times 250 \times 10^6 \times 8}{5 \times 10^6} = 400 \ sec
-
 \end{split}
 $$
 
